@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">RandomTeam</string>
+    <string name="app_name">Random Team</string>
+    <!-- Home Main -->
+    <string name="home_titulo">¡Bienvenido al generador de equipos aleatorios!</string>
+    <string name="home_boton">Comenzar</string>
+    <!-- Creditos -->
+    <string name="creditos_titulo">Random Team por Felipe Garza</string>
+    <string name="creditos_mas">Click aquí para ver mi Github</string>
+    <!-- Home -->
+    <string name="home_nombre">Introduce el nombre del equipo</string>
+    <string name="home_agregar">Agregar</string>
+    <string name="home_generar">Generar orden aleatorio</string>
 </resources>
