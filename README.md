@@ -117,31 +117,27 @@ Se visualiza desde la actividad de home.
 
 
  - Al menos 5 diferentes widget "basicos" (20pts):
+   
    * TextView
    <p align="center">
-  <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/textView.png?raw=true"  style="height: 500px;
-    box-shadow: 0px 0px 10px #0000004f;">
+  <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/textView.png?raw=true"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
 </p>
 
    * EditText
    <p align="center">
-  <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/editText.png?raw=true"  style="height: 500px;
-    box-shadow: 0px 0px 10px #0000004f;"></p>
-
+  <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/editText.png?raw=true"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
+  </p>
    * Button
    <p align="center">
-    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/button.png?raw=true"  style="height: 500px;
-    box-shadow: 0px 0px 10px #0000004f;">
+    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/button.png?raw=true"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
 </p>
 
    * ImageView
    <p align="center">
-    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/image.png?raw=true"  style="height: 500px;
-    box-shadow: 0px 0px 10px #0000004f;">
+    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/image.png?raw=true"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
 </p>
 
    * SwitchButton
  <p align="center">
-    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/switch.png?raw=true"  style="height: 500px;
-    box-shadow: 0px 0px 10px #0000004f;">
+    <img src="https://github.com/fegarza/RandomTeam/blob/main/md/widgets/switch.png?raw=true"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
 </p>
