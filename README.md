@@ -28,6 +28,15 @@ No. Control: #17100218
 
 
 
+## Funcionamiento de la aplicación
+
+<p align="center">
+  <img src="https://i.imgur.com/Vpq9KRn.gif"  style="height: 500px; box-shadow: 0px 0px 10px #0000004f;">
+</p>
+
+
+
+
 ## Criterios a evaluar 
 
 - Al menos una intención explicita (10pts)
