@@ -15,10 +15,15 @@ El proyecto empieza con una actividad principal la cual es la bienvenida, poster
 - Salir de la aplicación
 
 
-<b>Datos del alumno que hace entrega:</b>
+<b>Datos:</b><br>
+
+
 Materia: Programación Móvil 1
+
 Docente: Ing. José Guadalupe Aguiñaga Abundiz
+
 Alumno: Juan Felipe Garza Sánchez
+
 No. Control: #17100218
 
 
