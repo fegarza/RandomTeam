@@ -6,5 +6,4 @@ class Equipo {
     constructor(nombre: String){
         this.nombre = nombre;
     }
-
 }

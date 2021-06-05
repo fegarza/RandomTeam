@@ -10,4 +10,6 @@
     <string name="home_nombre">Introduce el nombre del equipo</string>
     <string name="home_agregar">Agregar</string>
     <string name="home_generar">Generar orden aleatorio</string>
+
+
 </resources>

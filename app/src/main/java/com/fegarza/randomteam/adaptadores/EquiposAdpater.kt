@@ -9,14 +9,22 @@ import com.fegarza.randomteam.databinding.LayoutEquipoItemBinding
 import com.fegarza.randomteam.entidades.Equipo
 import java.util.ArrayList
 
-class EquiposAdapter: RecyclerView.Adapter<EquiposAdapter.EquiposViewHolder>(){
+class EquiposAdapter: RecyclerView.Adapter<EquiposAdapter.EquiposViewHolder>(), View.OnClickListener{
 
     var equipos = ArrayList<Equipo>();
+    var ocultarNombres: Boolean = false
 
+    lateinit var clickListenner : View.OnClickListener;
 
+    override fun onClick(v: View?) {
+        if(clickListenner != null){
+            this.clickListenner.onClick(v);
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquiposViewHolder {
-        var layout = LayoutInflater.from(parent.context).inflate(R.layout.layout_equipo_item, null);
+        var layout = LayoutInflater.from(parent.context).inflate(R.layout.layout_equipo_item, parent, false);
+        layout.setOnClickListener(this)
         return EquiposViewHolder(layout);
     }
 
@@ -25,24 +33,33 @@ class EquiposAdapter: RecyclerView.Adapter<EquiposAdapter.EquiposViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: EquiposViewHolder, position: Int) {
-        holder.cargarEquipo(this.equipos.get(position))
+        holder.cargarEquipo(this.equipos.get(position), position, ocultarNombres)
     }
 
     class EquiposViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var equipo = Equipo("");
+
         private lateinit var binding : LayoutEquipoItemBinding
 
         init{
             binding = LayoutEquipoItemBinding.bind(this.itemView)
         }
 
-        fun cargarEquipo(equipo:  Equipo){
+        fun cargarEquipo(equipo:  Equipo, posicion: Int, ocultar: Boolean  ){
             this.equipo = equipo;
-            this.binding.textNombre.text = equipo.nombre
+            if(ocultar){
+                this.binding.textNombre.text = "?"
+            }else{
+                this.binding.textNombre.text = equipo.nombre
+            }
+
+            this.binding.textOrden.text = (posicion+1).toString()
         }
 
     }
+
+
 
 
 }

@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
-
     fun goHome(vista: View){
         var miIntencion = Intent(this, HomeActivity::class.java);
         startActivity(miIntencion)

@@ -1,61 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context=".HomeActivity"
-    >
+    android:orientation="vertical">
 
-  <Button
-      android:id="@+id/button"
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
       android:layout_width="match_parent"
-      android:layout_height="56dp"
-      android:layout_marginTop="12dp"
-      android:text="@string/home_agregar"
-      android:textSize="14sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.487"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textField" />
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      app:subtitleTextColor="@color/white"
+      app:titleTextColor="@android:color/white"
+      android:foregroundTint="@color/white"
+      style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface">
 
-  <Button
-      android:id="@+id/button2"
-      android:layout_width="524dp"
-      android:layout_height="60dp"
-      android:backgroundTint="@color/design_default_color_primary_dark"
-      android:text="@string/home_boton"
-      android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.652"
-      app:layout_constraintStart_toStartOf="parent" />
+  </androidx.appcompat.widget.Toolbar>
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rv_personas"
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="491dp"
-      android:layout_marginBottom="28dp"
-      app:layout_constraintBottom_toTopOf="@+id/button2"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.463"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button"
-      app:layout_constraintVertical_bias="1.0" />
+      android:layout_height="match_parent"
+      android:padding="20dp">
 
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/text_nombre_equipo"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="match_parent"
-      android:layout_height="52dp"
-      android:hint="@string/home_nombre"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-    <com.google.android.material.textfield.TextInputEditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-  </com.google.android.material.textfield.TextInputLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/text_nombre_equipo"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/home_nombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <Button
+          android:id="@+id/button"
+          android:layout_width="match_parent"
+          android:layout_height="58dp"
+          android:layout_marginTop="20dp"
+          android:backgroundTint="@android:color/holo_green_light"
+          android:onClick="agregarEquipo"
+          android:text="@string/home_agregar"
+          android:textSize="14sp" />
+
+      <Switch
+          android:id="@+id/switch_ocultar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:onClick="ocultarNombres"
+          android:text="Ocultar nombre del equipo" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv_personas"
+          android:layout_width="match_parent"
+          android:layout_height="558dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/layout_border">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_marginTop="20dp"
+          android:backgroundTint="@color/design_default_color_secondary"
+          android:onClick="generarOrden"
+          android:text="@string/home_generar"
+          android:textSize="14sp" />
+
+      <fragment
+          android:id="@+id/fragment"
+          android:name="com.fegarza.randomteam.CreditosFragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>
