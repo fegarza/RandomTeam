@@ -105,7 +105,7 @@ class HomeActivity : AppCompatActivity() {
                 alertDialog.setTitle("Salir")
                 alertDialog.setMessage("¿Desea realmente salir de la aplicacion?")
                 alertDialog.setPositiveButton(
-                    "yes"
+                    "SÍ"
                 ) { _, _ ->
                     val homeIntent = Intent(Intent.ACTION_MAIN)
                     homeIntent.addCategory(Intent.CATEGORY_HOME)
@@ -113,7 +113,7 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(homeIntent)
                 }
                 alertDialog.setNegativeButton(
-                    "No"
+                    "NO"
                 ) { _, _ ->
                     Toast.makeText(this, "Se ha cancelado la operacion.", Toast.LENGTH_LONG).show()
                 }
